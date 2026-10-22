@@ -3,121 +3,227 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VECTRONIS LTD — Moving Systems Forward</title>
-  <meta name="description" content="VECTRONIS LTD is a UK software company building Finlens, a personal finance app, and providing IT services.">
-  <style>
-    :root {
-      --bg: #0b0f1a;
-      --panel: #121829;
-      --text: #e8ecf4;
-      --muted: #9aa5bd;
-      --accent: #4f7cff;
-      --line: #1f2740;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-
-    header {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; }
-    .logo { font-weight: 700; letter-spacing: 0.12em; font-size: 15px; color: var(--text); }
-    .logo:hover { text-decoration: none; }
-    nav a { color: var(--muted); margin-left: 24px; font-size: 14px; }
-    nav a:hover { color: var(--text); text-decoration: none; }
-
-    .hero { padding: 96px 0 72px; }
-    .hero h1 { font-size: clamp(32px, 5vw, 52px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
-    .hero h1 span { color: var(--accent); }
-    .hero p { margin-top: 20px; max-width: 580px; color: var(--muted); font-size: 18px; }
-    .hero .cta { display: inline-block; margin-top: 32px; padding: 12px 22px; background: var(--accent); color: #fff; border-radius: 8px; font-weight: 600; font-size: 15px; }
-    .hero .cta:hover { text-decoration: none; opacity: 0.92; }
-
-    section { padding: 56px 0; border-top: 1px solid var(--line); }
-    h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 24px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 28px; }
-    .card h3 { font-size: 20px; margin-bottom: 10px; }
-    .card p { color: var(--muted); font-size: 15px; }
-    .tag { display: inline-block; margin-top: 14px; font-size: 12px; color: var(--accent); background: rgba(79,124,255,0.12); padding: 4px 10px; border-radius: 999px; }
-
-    .contact p { color: var(--muted); font-size: 16px; }
-    .contact a { font-size: 18px; font-weight: 600; }
-
-    footer { border-top: 1px solid var(--line); padding: 36px 0 48px; font-size: 13px; color: var(--muted); }
-    footer p { margin-bottom: 6px; }
-    footer strong { color: var(--text); font-weight: 600; }
-  </style>
+  <title>Vectronis — Moving systems forward</title>
+  <meta name="description" content="Vectronis is a UK software company. We build products like Finlens, a personal finance app available in more than 20 languages, and develop software and systems for businesses.">
+  <meta name="theme-color" content="#151515">
+  <meta property="og:title" content="Vectronis — Moving systems forward">
+  <meta property="og:description" content="Vectronis is a UK software company. We build products like Finlens, a personal finance app available in more than 20 languages, and develop software and systems for businesses.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vectronis.co.uk/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 3l25 14.5v29L32 61 7 46.5v-29z' fill='%232F5EA0'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M19 22L32 29 45 20 M32 29L32 46 M19 22L32 46 45 20'/%3E%3C/g%3E%3Cg fill='%232F5EA0' stroke='%23fff' stroke-width='2.6'%3E%3Ccircle cx='19' cy='22' r='4'/%3E%3Ccircle cx='32' cy='46' r='4'/%3E%3Ccircle cx='32' cy='29' r='2.6'/%3E%3Ccircle cx='45' cy='20' r='6.8'/%3E%3C/g%3E%3Ccircle cx='45' cy='20' r='4' fill='%236CC9A5'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-  <header>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top" id="top">
     <div class="wrap">
-      <a class="logo" href="/">VECTRONIS</a>
-      <nav>
-        <a href="#work">What we do</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="/" aria-label="Vectronis home">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M32 3l25 14.5v29L32 61 7 46.5v-29z" fill="#2F5EA0" stroke="#2F5EA0" stroke-width="2" stroke-linejoin="round"/>
+        <g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M19 22L32 29 45 20 M32 29L32 46 M19 22L32 46 45 20"/></g>
+        <g fill="#2F5EA0" stroke="#fff" stroke-width="2.6"><circle cx="19" cy="22" r="4"/><circle cx="32" cy="46" r="4"/><circle cx="32" cy="29" r="2.6"/><circle cx="45" cy="20" r="6.8"/></g>
+        <circle cx="45" cy="20" r="4" fill="#6CC9A5"/>
+        </svg>
+        <span>Vectronis</span>
+      </a>
+      <nav aria-label="Main">
+        <a href="/#products">Products</a>
+        <a href="/#services">Services</a>
+        <a href="/#about" class="hide-sm">About</a>
+        <a href="/#contact" class="btn btn-ghost">Contact</a>
       </nav>
     </div>
   </header>
+  <main id="main">
 
-  <main>
     <div class="hero">
       <div class="wrap">
-        <h1>Moving Systems <span>Forward</span></h1>
-        <p>VECTRONIS LTD is a software company building modern, cross-platform applications and delivering IT services to businesses and individuals.</p>
-        <a class="cta" href="#contact">Get in touch</a>
+        <div>
+          <h1>Moving systems forward</h1>
+          <p class="lede">Vectronis is a UK software company. We build our own products, starting with Finlens, and develop software and systems for businesses that need to work reliably every day.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#products">Our products</a>
+            <a class="btn btn-ghost" href="#contact">Work with us</a>
+          </div>
+        </div>
+        <svg class="net" viewBox="0 0 520 440" aria-hidden="true">
+          <g>
+            <line class="edge" x1="40" y1="90" x2="150" y2="150"/><line class="edge" x1="40" y1="90" x2="110" y2="300"/><line class="edge" x1="110" y1="300" x2="150" y2="150"/><line class="edge" x1="110" y1="300" x2="260" y2="400"/><line class="edge" x1="470" y1="120" x2="400" y2="310"/><line class="edge" x1="470" y1="120" x2="370" y2="90"/><line class="edge" x1="400" y1="310" x2="260" y2="400"/><line class="edge" x1="150" y1="150" x2="370" y2="90"/><line class="edge" x1="150" y1="150" x2="260" y2="220"/><line class="edge" x1="370" y1="90" x2="260" y2="220"/><line class="edge" x1="400" y1="310" x2="260" y2="220"/><line class="edge" x1="110" y1="300" x2="260" y2="220"/><line class="edge" x1="260" y1="400" x2="260" y2="220"/>
+          </g>
+          <g><circle class="node dim" cx="40" cy="90" r="4"/><circle class="node dim" cx="110" cy="300" r="4"/><circle class="node dim" cx="470" cy="120" r="4"/><circle class="node dim" cx="400" cy="310" r="4"/><circle class="node dim" cx="260" cy="400" r="4"/><circle class="node dim" cx="150" cy="150" r="4"/><circle class="node dim" cx="370" cy="90" r="4"/></g>
+          <g transform="translate(130 92) scale(4.0625)">
+            <path class="hex" d="M32 3l25 14.5v29L32 61 7 46.5v-29z" stroke="#2F5EA0" stroke-width="2" stroke-linejoin="round"/>
+            <g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M19 22L32 29 45 20 M32 29L32 46 M19 22L32 46 45 20"/></g>
+            <g fill="#2F5EA0" stroke="#fff" stroke-width="2.6"><circle cx="19" cy="22" r="4"/><circle cx="32" cy="46" r="4"/><circle cx="32" cy="29" r="2.6"/><circle cx="45" cy="20" r="6.8"/></g>
+            <circle class="ring" cx="45" cy="20" r="4"/><circle class="ring r2" cx="45" cy="20" r="4"/><circle class="hot" cx="45" cy="20" r="4"/>
+          </g>
+        </svg>
       </div>
     </div>
 
-    <section id="work">
+    <section id="principles" aria-label="How we build">
       <div class="wrap">
-        <h2>What we do</h2>
-        <div class="grid">
-          <div class="card">
+        <div class="principles">
+          <div class="principle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6CC9A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+            <h3>Reliable by design</h3>
+            <p>We choose boring, proven technology where it matters and test the parts that can fail.</p>
+          </div>
+          <div class="principle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6CC9A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6"/></svg>
+            <h3>Clear to use</h3>
+            <p>Interfaces people understand without training, in the language they actually speak.</p>
+          </div>
+          <div class="principle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6CC9A5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            <h3>Built to keep building on</h3>
+            <p>Readable code, documented decisions and no lock-in, so the next change is as easy as the first.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Products</h2>
+          <p>Software we design, build and publish under the Vectronis name.</p>
+        </div>
+        <div class="products">
+          <article class="product featured">
+            <span class="kicker">Launching soon</span>
             <h3>Finlens</h3>
-            <p>A personal finance app that helps you track spending, plan budgets and understand where your money goes. Built with Flutter for iOS and Android, localised in 20+ languages.</p>
-            <span class="tag">Coming soon</span>
+            <p>A personal finance app that shows where your money goes and how much is left, in your own language. Built with Flutter for iOS and Android.</p>
+            <ul>
+              <li>Log spending in seconds and see the month update instantly</li>
+              <li>Budgets per category that show what is left, not just what was spent</li>
+              <li>Your data stays on your device unless you choose to back it up</li>
+            </ul>
+            <div class="langs" aria-label="Available languages">
+              <span>English</span><span>Español</span><span>Türkçe</span><span>Türkmençe</span><span>Français</span><span>Deutsch</span><span>Русский</span><span>Português</span><span>中文</span><span>日本語</span><span class="more">20+ languages</span>
+            </div>
+          </article>
+          <article class="product next">
+            <div>
+              <span class="kicker soon">In development</span>
+              <h3>What comes next</h3>
+              <p>Finlens is the first of a family of focused, well-made tools. New products are announced here first.</p>
+            </div>
+            <p class="bottom">Want early access or have an idea? <a href="mailto:info@vectronis.co.uk">Write to us</a>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Services</h2>
+          <p>Alongside our products, we take on a small number of client projects at a time, so each one gets real attention.</p>
+        </div>
+        <div class="service">
+          <h3>Mobile and web applications</h3>
+          <p>From first idea to app store release. Flutter for mobile, modern web stacks for the rest, with clean architecture and code your team can keep building on.</p>
+        </div>
+        <div class="service">
+          <h3>Systems integration</h3>
+          <p>Connecting the tools a business already uses, such as payments, data, back office and the APIs between them, so information moves without manual work.</p>
+        </div>
+        <div class="service">
+          <h3>Technical support and consulting</h3>
+          <p>Ongoing help for small teams that need reliable systems but not a full in-house engineering department.</p>
+        </div>
+
+        <div class="process">
+          <h3>How a project runs</h3>
+          <div class="steps">
+            <div class="step"><h4>Discovery</h4><p>A short call and a written brief: what the system must do, for whom, and what success looks like.</p></div>
+            <div class="step"><h4>Proposal</h4><p>Scope, timeline and a fixed price or clear rate, agreed before any code is written.</p></div>
+            <div class="step"><h4>Build</h4><p>Work in short cycles with something you can try every one or two weeks, so direction can change early.</p></div>
+            <div class="step"><h4>Release and support</h4><p>Launch, handover with documentation, and ongoing support if you want it.</p></div>
           </div>
-          <div class="card">
-            <h3>Software development</h3>
-            <p>Design and development of mobile and web applications, from idea to release, with a focus on clean architecture and long-term maintainability.</p>
-          </div>
-          <div class="card">
-            <h3>IT services</h3>
-            <p>Consulting, integration and technical support for small businesses that need reliable systems without the overhead of an in-house team.</p>
-          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="wrap">
+        <h2>About Vectronis</h2>
+        <div class="text">
+          <p>Vectronis is an independent software company registered in the United Kingdom. We build products we would want to use ourselves and apply the same standard to client work: systems that are reliable, clear and easy to keep improving.</p>
+          <p>We work remotely and serve clients in the UK and internationally, in English, Turkish, Turkmen and Russian.</p>
+          <dl class="facts">
+            <div class="fact"><dt>Founded</dt><dd>2026</dd></div>
+            <div class="fact"><dt>Registered in</dt><dd>England and Wales</dd></div>
+            <div class="fact"><dt>Focus</dt><dd>Mobile apps, web and integration</dd></div>
+            <div class="fact"><dt>Working languages</dt><dd>English, Turkish, Turkmen, Russian</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <div class="wrap">
-        <h2>Contact</h2>
-        <p>For enquiries, partnerships or support, email us at</p>
-        <p><a href="mailto:info@vectronis.co.uk">info@vectronis.co.uk</a></p>
+        <h2>Get in touch</h2>
+        <div>
+          <p>Tell us about your project, ask about Finlens, or request support. We reply to every message, usually within one working day.</p>
+          <a class="mail" href="mailto:info@vectronis.co.uk">info@vectronis.co.uk</a>
+          <div class="topics">
+            <div class="topic"><strong>New project</strong><span>Tell us what you need and when.</span></div>
+            <div class="topic"><strong>Finlens</strong><span>Questions, feedback or early access.</span></div>
+            <div class="topic"><strong>Support</strong><span>Help with something we built.</span></div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-
   <footer>
     <div class="wrap">
-      <p><strong>VECTRONIS LTD</strong> — Registered in England and Wales, Company No. 17533965</p>
-      <p>Registered address: First Floor Office, 3 Hornton Place, London W8 4LZ, United Kingdom</p>
-      <p>© 2026 VECTRONIS LTD. All rights reserved.</p>
+      <div class="cols">
+        <div>
+          <a class="brand" href="/" aria-label="Vectronis home">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 3l25 14.5v29L32 61 7 46.5v-29z" fill="#2F5EA0" stroke="#2F5EA0" stroke-width="2" stroke-linejoin="round"/>
+        <g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M19 22L32 29 45 20 M32 29L32 46 M19 22L32 46 45 20"/></g>
+        <g fill="#2F5EA0" stroke="#fff" stroke-width="2.6"><circle cx="19" cy="22" r="4"/><circle cx="32" cy="46" r="4"/><circle cx="32" cy="29" r="2.6"/><circle cx="45" cy="20" r="6.8"/></g>
+        <circle cx="45" cy="20" r="4" fill="#6CC9A5"/>
+            </svg>
+            <span>Vectronis</span>
+          </a>
+          <p>Moving systems forward. A UK software company building its own products and reliable systems for clients.</p>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/#products">Products</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy.html">Privacy policy</a></li>
+            <li><a href="mailto:info@vectronis.co.uk">info@vectronis.co.uk</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">
+        <p>© 2026 <strong>VECTRONIS LTD</strong>. All rights reserved.</p>
+        <p>Registered in England and Wales, company number <strong>17533965</strong>. Registered address: First Floor Office, 3 Hornton Place, London W8 4LZ, United Kingdom.</p>
+      </div>
     </div>
   </footer>
-
+  <script>
+    (function () {
+      var top = document.getElementById('top');
+      function onScroll() { top.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+    })();
+  </script>
 </body>
 </html>
